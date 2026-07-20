@@ -29,4 +29,4 @@ jobs:
           pip install numpy pillow scikit-learn mlflow
 
       - name: Train model with MLflow
-        run: mlflow run . --no-conda
+        run: mlflow run . --env-manager local
