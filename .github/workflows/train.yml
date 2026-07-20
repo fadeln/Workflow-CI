@@ -28,5 +28,5 @@ jobs:
         run: |
           pip install numpy pillow scikit-learn mlflow
 
-      - name: Train model
-        run: python modelling.py
+      - name: Train model with MLflow
+        run: mlflow run . --no-conda
