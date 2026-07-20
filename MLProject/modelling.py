@@ -25,7 +25,7 @@ def load_images_and_labels(directory):
             y.append(label)
     return np.array(X), np.array(y)
 
-mlflow.set_tracking_uri(os.path.join(PROJECT_DIR, "..", "mlruns"))
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
 mlflow.sklearn.autolog()
 
 with mlflow.start_run(run_name="Horse_vs_Human_RF"):
